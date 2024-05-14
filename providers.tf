@@ -7,6 +7,16 @@ terraform {
   }
 }
 
+# Default provider setting
+provider "aws" {
+    region = "us-east-2"
+    default_tags {
+        tags = {
+            Project = "AWS Network as Code by Peet van de Sande"
+        }
+    }
+}
+
 provider "aws" {
     region = "eu-west-1"
     alias = "ew1"
